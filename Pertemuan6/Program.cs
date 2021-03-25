@@ -10,6 +10,7 @@ namespace Pertemuan6
         public string NIP { get; set; }
         public string Prodi { get; set; }
         public string Status { get; set; }
+        public string Telepon { get; set; }
     }
 
     class Program
@@ -18,9 +19,11 @@ namespace Pertemuan6
         {
             string hasilBaca = File.ReadAllText("/Users/johan/Projects/Pertemuan6/Pertemuan6/input.json");
 
-            Dosen dosenJson = JsonSerializer.Deserialize<Dosen>(hasilBaca);
+            List<Dosen> listDosen = JsonSerializer.Deserialize<List<Dosen>>(hasilBaca);
 
-            Console.WriteLine(dosenJson.Prodi);
+            for (int i = 0; i < listDosen.Count; i++) {
+                Console.WriteLine( listDosen[i].Telepon);
+            }
         }
     }
 }

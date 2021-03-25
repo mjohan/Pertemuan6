@@ -1,6 +1,23 @@
-{
-  "Nama": "Johan",
-  "NIP": "5555",
-  "Prodi": "RPL",
-  "Status": "Profesional"
-}
+[
+  {
+    "Nama": "Johan",
+    "NIP": "1234",
+    "Prodi": "RPL",
+    "Status": "Profesional",
+    "Telepon": "1234 1234"
+  },
+  {
+    "Nama": "Michael",
+    "NIP": "1111",
+    "Prodi": "RPL",
+    "Status": "Tetap",
+    "Telepon": "1111 1111"
+  },
+  {
+    "Nama": "Jim",
+    "NIP": "9999",
+    "Prodi": "RPL",
+    "Status": "Tamu",
+    "Telepon": "9999 9999"
+  }
+]
