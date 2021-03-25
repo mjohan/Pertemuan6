@@ -1,23 +1,32 @@
 [
   {
-    "Nama": "Johan",
+    "Nama": {
+      "Lengkap": "Muhammad Johan",
+      "Panggilan": "Johan"
+    },
     "NIP": "1234",
     "Prodi": "RPL",
     "Status": "Profesional",
-    "Telepon": "1234 1234"
+    "Telepon": ["1234 1234", "9876 9876"]
   },
   {
-    "Nama": "Michael",
+    "Nama": {
+      "Lengkap": "Michael Scott",
+      "Panggilan": "Michael"
+    },
     "NIP": "1111",
     "Prodi": "RPL",
     "Status": "Tetap",
-    "Telepon": "1111 1111"
+    "Telepon": [ "1111 1111" ]
   },
   {
-    "Nama": "Jim",
+    "Nama": {
+      "Lengkap": "Jim Halpert",
+      "Panggilan": "Jim"
+    },
     "NIP": "9999",
     "Prodi": "RPL",
     "Status": "Tamu",
-    "Telepon": "9999 9999"
+    "Telepon": [ "9999 9999", "0000 0000", "1111 1111" ]
   }
 ]
