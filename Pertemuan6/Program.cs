@@ -10,35 +10,17 @@ namespace Pertemuan6
         public string NIP { get; set; }
         public string Prodi { get; set; }
         public string Status { get; set; }
-
-        public Dosen(string Nama, string NIP, string Prodi, string Status) {
-            this.Nama = Nama;
-            this.NIP = NIP;
-            this.Prodi = Prodi;
-            this.Status = Status;
-        }
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            List<Dosen> arrDosen = new List<Dosen>();
+            string hasilBaca = File.ReadAllText("/Users/johan/Projects/Pertemuan6/Pertemuan6/input.json");
 
-            Dosen dosenJohan = new Dosen("Johan", "1234", "RPL", "Profesional");
-            arrDosen.Add(dosenJohan);
+            Dosen dosenJson = JsonSerializer.Deserialize<Dosen>(hasilBaca);
 
-            Dosen dosenMichael = new Dosen("Michael", "1111", "RPL", "Tetap");
-            arrDosen.Add(dosenMichael);
-
-            JsonSerializerOptions jsonOption = new JsonSerializerOptions()
-            {
-                WriteIndented = true
-            };
-
-            string jsonString = JsonSerializer.Serialize(arrDosen, jsonOption);
-
-            File.WriteAllText("/Users/johan/Projects/Pertemuan6/Pertemuan6/dosen.json", jsonString);
+            Console.WriteLine(dosenJson.Prodi);
         }
     }
 }
